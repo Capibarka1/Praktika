@@ -256,10 +256,9 @@ def startpos(board, size, player):
     group_board = [[0]*size for k in range(size)]
 
     for i in range(size):
-        if board[i][0] == 1:
+        if board[i][0] == player:
             q.append([i, 0])
-            if board[i][0] == player:
-                group_board[i][0] = player
+            group_board[i][0] = player
 
     steps = [(-1, -1), (-1, 0), (0, 1), (1, 1), (1, 0), (0, -1)]
     while len(q) > 0:
@@ -284,10 +283,9 @@ def startpos(board, size, player):
     group_board = [[0]*size for k in range(size)]
 
     for i in range(size):
-        if board[i][size - 1] == 1:
+        if board[i][size - 1] == player:
             q.append([i, size - 1])
-            if board[i][size - 1] == player:
-                group_board[i][size - 1] = player 
+            group_board[i][size - 1] = player 
 
     steps = [(-1, -1), (-1, 0), (0, 1), (1, 1), (1, 0), (0, -1)]
     while len(q) > 0:
