@@ -276,10 +276,7 @@ class VolumeSlider(QWidget):
                 new_value = self.start_value + delta_val
                 new_value = max(0.0, min(1.0, new_value))
                 self.value = round(new_value, 2)
-                self.update()   
-        if self.drag_event and self.type_sl == 'music':
-            self.game_sounds.change_volume(self.type_sl, self.value)
-        if self.drag_event and self.type_sl == 'sound_effects':
+                self.update()
             self.game_sounds.change_volume(self.type_sl, self.value)
         return super().mouseMoveEvent(event)
     
