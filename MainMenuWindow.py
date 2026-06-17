@@ -373,7 +373,7 @@ class MainMenu(QMainWindow):
         if not self.valid_save(file_path):
             message = QMessageBox()
             message.setText(r"""Файл сохранения повреждён. Игра не будет продолжена. 
-                            Повреждённый файл находится в папке %APPDATA%\Hex\saves\. Удалите или исправьте его""")
+                            Повреждённый файл находится в папке APPDATA\Roaming\Hex\saves\. Удалите или исправьте его""")
             message.setStyleSheet('color: #000000;')
             message.setIcon(QMessageBox.Icon.Critical)
             message.exec()
